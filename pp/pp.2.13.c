@@ -8,6 +8,13 @@ int bis(int x, int m) {
 }
 
 int bic(int x, int m) {
+    /* Truth table:
+     * x m r
+     * 0 0 0
+     * 1 0 1
+     * 0 1 0
+     * 1 1 0
+     */
     return (x ^ m) & x;
 }
 
