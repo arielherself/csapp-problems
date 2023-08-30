@@ -2,7 +2,7 @@
 // Created by user on 8/30/23.
 //
 
-#include <stdio.h>
+#include "include/common.h"
 
 int least_significant_byte(int x) {
     return x & 0xff;
@@ -14,14 +14,6 @@ int all_but_least_significant_byte_complemented(int x) {
 
 int least_significant_byte_set_to_one(int x) {
     return x & ~0xff | 0xff;
-}
-
-void show_bytes(unsigned char *p, size_t size) {
-    int i;
-    for (i = size - 1; i >= 0; --i) {
-        printf(" %.2X", p[i]);
-    }
-    printf("\n");
 }
 
 int main() {

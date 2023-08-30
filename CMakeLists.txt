@@ -3,6 +3,8 @@ project(problems C)
 
 set(CMAKE_C_STANDARD 11)
 
+add_library(commonlib STATIC pp/include/common.c pp/include/common.h)
+
 add_executable(problems main.c)
 
 add_executable(pp.2.12 pp/pp.2.12.c)
