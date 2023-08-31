@@ -6,7 +6,9 @@
 #define PROBLEMS_COMMON_H
 
 #include <stdio.h>
+#include <stdint.h>
 
 void show_bytes(unsigned char *, size_t);
+void show_bytes_inline(unsigned char *, size_t, char *);
 
 #endif //PROBLEMS_COMMON_H
