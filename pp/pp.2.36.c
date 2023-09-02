@@ -1,7 +1,7 @@
 //
 // Created by user on 8/31/23.
 //
-#include "include/common.h"
+#include "../include/common.h"
 
 int tmult_ok(int a, int b) {
     int64_t at = (int64_t) a, bt = (int64_t) b;

@@ -1,7 +1,7 @@
 //
 // Created by user on 8/30/23.
 //
-#include "include/common.h"
+#include "../include/common.h"
 
 int bis(int x, int m) {
     return x | m;
