@@ -83,6 +83,10 @@ void show_unsigned(unsigned u) {
     return show_bytes(&u, sizeof(unsigned));
 }
 
+void show_unsigned_bits(unsigned u) {
+    return show_bits(&u, sizeof(unsigned));
+}
+
 void show_short(short s) {
     return show_bytes(&s, sizeof(short));
 }

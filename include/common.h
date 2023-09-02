@@ -16,6 +16,7 @@ void show_bytes_inline(unsigned char *, size_t, char *);
 int logical_rightshift(int, unsigned);
 void show_int(int);
 void show_unsigned(unsigned);
+void show_unsigned_bits(unsigned);
 void show_short(short);
 void show_long(long);
 void show_float(float);
