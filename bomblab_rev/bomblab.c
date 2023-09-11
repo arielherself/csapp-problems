@@ -59,7 +59,7 @@ void phase_2() {
 void phase_3() {
     int n, r;
     int s = scanf("%d %d", &n, &r);
-    if (s > 1)  explode_bomb();
+    if (s <= 1)  explode_bomb();
     switch (n) {
         case 0:
             if (r == 0xCF)  break;
