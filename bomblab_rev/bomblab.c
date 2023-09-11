@@ -40,6 +40,33 @@ void phase_2() {
     } while (ptr != end);
 }
 
+void phase_3() {
+    int n, r;
+    int s = scanf("%d %d", &n, &r);
+    if (s > 1)  explode_bomb();
+    if ((unsigned) n > 7)  explode_bomb();
+    switch (n) {
+        case 0:
+            if (r == 0xCF)  break;
+        case 1:
+            if (r == 0x137)  break;
+        case 2:
+            if (r == 0x2C3)  break;
+        case 3:
+            if (r == 0x100)  break;
+        case 4:
+            if (r == 0x185)  break;
+        case 5:
+            if (r == 0xCE)  break;
+        case 6:
+            if (r == 0x2AA)  break;
+        case 7:
+            if (r == 0x147)  break;
+        default:
+            explode_bomb();
+    }
+}
+
 int main() {
     printf("Welcome to my fiendish little bomb. You have 6 phases with\n"
            "which to blow yourself up. Have a nice day!\n");
@@ -58,5 +85,8 @@ int main() {
     phase_2();
 
     printf("That's number 2.  Keep going!\n");
+    phase_3();
+
+    printf("Halfway there!");
     return 0;
 }
