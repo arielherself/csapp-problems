@@ -1,3 +1,10 @@
+/**
+ * WARNING: NO COPYING for students
+ * Every git repository has a log, which records the timestamp of each commit.
+ * If a professor finds out that two submissions are identical,
+ * the timestamp provides abundant proof that my work is done before you submit a copy of it.
+ */
+
 //
 // Created by user on 9/8/23.
 // This code aims to mimic the essential logic of "bomb-lab". Some components like the detection of Ctrl-C are not implemented.
