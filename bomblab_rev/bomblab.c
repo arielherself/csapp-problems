@@ -22,6 +22,17 @@ void read_six_numbers(int target[6]) {
     }
 }
 
+int func4(int edi, int esi, int edx) {
+    int ecx = ((edx - esi) + ((edx - esi >> 31) & 1) >> 1) + esi;
+    if (ecx == edi) {
+        return 0;
+    } else if (ecx < edi) {
+        return 2 * (unsigned) func4(edi, ecx + 1, edx) + 1;
+    } else {
+        return 2 *  func4(edi, esi, ecx - 1);
+    }
+}
+
 /**
   * Constant
   * 0x402400 42 6f 72 64 65 72 20 72
@@ -82,6 +93,15 @@ void phase_3() {
     }
 }
 
+void phase_4() {
+    int i1, i2;
+    int s = scanf("%d %d", &i1, &i2);
+    if (s != 2)  explode_bomb();
+    if (i1 > 14)  explode_bomb();
+    if (func4(i1, 0, 14) != 0)  explode_bomb();
+    if (i2 != 0)  explode_bomb();
+}
+
 int main() {
     printf("Welcome to my fiendish little bomb. You have 6 phases with\n"
            "which to blow yourself up. Have a nice day!\n");
@@ -102,6 +122,9 @@ int main() {
     printf("That's number 2.  Keep going!\n");
     phase_3();
 
-    printf("Halfway there!");
+    printf("Halfway there!\n");
+    phase_4();
+
+    printf("So you got that one.  Try this one.\n");
     return 0;
 }
