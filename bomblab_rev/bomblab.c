@@ -1,9 +1,15 @@
 //
 // Created by user on 9/8/23.
+// This code aims to mimic the essential logic of "bomb-lab". Some components like the detection of Ctrl-C are not implemented.
 //
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+/*
+ * Hex decoder Python helper:
+ *     decoder = lambda s : bytes.fromhex(''.join(s.split(' '))).decode()
+ */
 
 void explode_bomb() {
     printf("\nBOOM!!!\nThe bomb has blown up.\n");
@@ -16,6 +22,16 @@ void read_six_numbers(int target[6]) {
     }
 }
 
+/**
+  * Constant
+  * 0x402400 42 6f 72 64 65 72 20 72
+  *          65 6c 61 74 69 6f 6e 73
+  *          20 77 69 74 68 20 43 61
+  *          6e 61 64 61 20 68 61 76
+  *          65 20 6e 65 76 65 72 20
+  *          62 65 65 6e 20 62 65 74
+  *          74 65 72 2e
+  */
 void phase_1(char *input) {
     char *ans = "Border relations with Canada have never been better.";
     if (strcmp(input, ans) != 0) {
